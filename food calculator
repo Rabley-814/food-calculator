@@ -1,0 +1,48 @@
+import time
+import sys
+#this imports the systems of code that will/can be required
+
+#add a value that runs lines 5 - 27 in a loop and adds a new item every time the input (Y) is received
+print ("WELCOME TO THE JUNK FOOD DINER PROGRAM \n\n\n")
+quantity1Int = input("Please enter a quantity for the current row: ")
+Quantity1 = int(quantity1Int)
+Product1Str = input ("please enter a product code: ")
+Product1 = str(Product1Str)
+unitPrice1float = input ("please enter a unit price: £")
+unitPrice1 = float(unitPrice1float)
+print ("\n")
+#the above is to gather all information needed to calculate the overall price of the first item(s)
+quantity2Int = input("Please enter a quantity for the current row: ")
+Quantity2 = int(quantity2Int)
+Product2Str = input ("please enter a product code: ")
+Product2 = str(Product2Str)
+unitPrice2float = input ("please enter a unit price: £")
+unitPrice2 = float(unitPrice2float)
+print ("\n")
+#the above is to gather all information needed to calculate the overall price of the second item(s)
+quantity3Int = input("Please enter a quantity for the current row: ")
+Quantity3 = int(quantity3Int)
+Product3Str = input ("please enter a product code: ")
+Product3 = str(Product3Str)
+unitPrice3float = input ("please enter a unit price: £")
+unitPrice3 = float(unitPrice3float)
+#the above is to gather all information needed to calculate the overall price of the third item(s)
+totalThisLine1 = Quantity1 * unitPrice1
+totalThisLine2 = Quantity2 * unitPrice2
+totalThisLine3 = Quantity3 * unitPrice3
+#the above calculates the true overall price of all items
+print ("QUANTITY \t FOOD ITEM \t\t PRICE PER ITEM (£) \t TOTAL PRICE (£)")
+print (Quantity1,"\t\t", Product1,"\t\t\t", unitPrice1, "\t\t\t", totalThisLine1)
+print (Quantity2,"\t\t", Product2, "\t\t\t", unitPrice2, "\t\t\t", totalThisLine2)
+print (Quantity3,"\t\t", Product3, "\t\t\t", unitPrice3, "\t\t\t", totalThisLine3)
+#the above displays the total prices in a table
+overallTotal = totalThisLine1 + totalThisLine2 + totalThisLine3
+time.sleep(5)
+print ("overall you spent: £",overallTotal,"on food items.")
+#this segment displays the true overall total of all items combined
+
+time.sleep (5)
+if overallTotal <= 30:
+    print ("congratulations! you're a cheap skate!")
+else:
+    print ("you spend wayyyyy too much money on food man")
